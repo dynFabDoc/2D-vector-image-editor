@@ -1,4 +1,5 @@
 {
+	"title":"Dessin",
 	"instructions":[
 		{
 			"id":"launch",
@@ -52,6 +53,61 @@
 				
 			],
 			"content":"Dessiner @path"
+		},
+		{
+			"id":"selectPoints",
+			"instructions":[
+				{
+					"action":"mouseClick",
+					"icon":"bouton entre la flèche et la vague",
+					"where":"topLeft",
+					"tooltip":"Editer les noeuds ou les poignées de contrôle d'un chemin",
+					"shortcut":"F2"
+				},
+				{
+					"action":"mouseClick",
+					"where":"les points à modifier et déplacer-les"
+				}
+			]
+		},
+		{
+			"id":"distributeVertically",
+			"instructions":[
+				{
+					"action":"menu",
+					"options":"Objet|Aligner et distribuer ...",
+					"shortcut":"CTRL+SHIFT+A"
+				},
+				{
+					"action":"mouseClick",
+					"where":"la distribution souhaitée dans la partie en haute à droite de l'écran, 2ème zone \"Distribuer\" puis 2ème ligne pour les options de distributions verticales"
+				}
+			]
+		},
+		{
+			"id":"editBezierCurves",
+			"instructions":[
+				{
+					"action":"mouseClick",
+					"icon":"bouton entre la flèche et la vague",
+					"where":"topLeft",
+					"tooltip":"Editer les noeuds ou les poignées de contrôle d'un chemin",
+					"shortcut":"F2"
+				},
+				{
+					"action":"mouseClick",
+					"where":"l'un des points de la courbe à modifier"
+				},
+				{
+					"action":"mouseClick",
+					"icon":"bouton tout en haut à gauche (sous les menus) 4ème zone",
+					"where":"topLeft"
+				},
+				{
+					"action":"custom",
+					"content":"Il est maintenant possible de modifier la courbure en jouant sur les 2 curseurs autour du point sélectionné précédemment"
+				}
+			]
 		}
 		
 	]
