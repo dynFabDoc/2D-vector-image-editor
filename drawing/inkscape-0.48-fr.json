@@ -1,0 +1,58 @@
+{
+	"instructions":[
+		{
+			"id":"launch",
+			"action":"runProgram",
+			"program":"Inkscape"
+		},
+		{
+			"id":"initSave",
+			"action":"menu",
+			"options":"Fichier|Enregistrer sous",
+			"shortcut":"CTRL+SHIFT+S"
+		},
+		{
+			"id":"nameFile",
+			"action":"keyboardInput",
+			"value":"le nom du fichier à enregistrer",
+			"validateAtEnd":true
+		},
+		{
+			"id":"save",
+			"action":"menu",
+			"options":"Fichier|Enregistrer",
+			"shortcut":"CTRL+S"
+		}
+		
+	],
+	"models":[
+		{
+			"id":"drawPath",
+			"instructions":[
+				{
+					"action":"mouseClick",
+					"icon":"Stylo qui dessine un 2 à l'envers",
+					"where":"middleLeft",
+					"tooltip":"Tracer des courbes de Bézier et des segments de droites",
+					"shortcut":"SHIFT+F6"
+				},
+				{
+					"action":"mouseClick",
+					"where":"le point de départ de votre dessin dans la partie blanche"
+				},
+				{
+					"action":"custom",
+					"content":"Dessiner @path en cliquant à chaque point pour former le dessin, vous pouvez maintenir enfoncé le bouton de la souris si vous souhaitez faire une courbe (vous pourrez la modifier ultérieurement)"
+				},
+				{
+					"action":"keyboard",
+					"key":"ENTER",
+					"to":"valider le tracé"
+				}
+				
+			]
+			"content":"Dessiner @path"
+		}
+		
+	]
+}
